@@ -5,7 +5,7 @@
 */
 function convert() {
 
-    if (flexRadioDefaultdec.checked && flexRadioDefaultbin1.checked)
+    if (flexRadioDefaultdec.checked && flexRadioDefaultbin1.checked){
     // Aqui, é feita a conversão de decimal para binário. toString retorna a string de um número
     // O método toString [2] retorna a string na base 2; ou seja, retorna o número binário daquele decimal.
     const number = parseInt(document.getElementById("base1").value);
@@ -13,6 +13,6 @@ function convert() {
     // converter para binário
     const result = number.toString(2);
 
-    document.getElementById("Converter").innerHTML=('Binary:' + ' ' + result);
-
+    document.getElementById("Converter").innerHTML=("Aqui:" + 'Binary:' + ' ' + result);
+}
 }
