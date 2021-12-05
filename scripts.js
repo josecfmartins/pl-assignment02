@@ -58,6 +58,33 @@ function convert() {
     
         document.getElementById("Converter").innerHTML=("Decimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Octagonal:</h5>" + "Sistema Octagonal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "<p></p>" + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes."  );
         }
+    
+    //Conversão Decimal para Hexadecimal:
+    if (flexRadioDefaultdec.checked && flexRadioDefaulthex1.checked){
+        // Aqui, é feita a conversão de decimal para octal. toString retorna a string de um número
+        //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número decimal.
+        // O método toString [6] retorna a string na base 6; ou seja, retorna o número binário daquele decimal.
+        const number = parseInt(document.getElementById("base1").value);
+    
+        // converter para octal:
+        const result = number.toString(6);
+    
+        document.getElementById("Converter").innerHTML=("Hexadecimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes." + "<p></p>" + "<h5>Sistema Hexadecimal:</h5>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos" + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" );
+        
+        }
+    
+        //Conversão Hexadecimal para Decimal:
+        if (flexRadioDefaulthex.checked && flexRadioDefaultdec1.checked){
+        //Aqui, é feita a conversão de octal para decimal.
+        //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número binário.
+    
+        const number = parseInt(document.getElementById("base1").value);
+    
+        // converter para decimal:
+        const result = parseInt(number, 6);
+    
+        document.getElementById("Converter").innerHTML=("Decimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Hexadecimal:</h5>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos" + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes."  );
+        }
 
 
 //Alerta para tentar converter um número para a mesma base em que o mesmo se encontra    
