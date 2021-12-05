@@ -25,7 +25,11 @@ function convert() {
     //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número binário.
 
     const number = parseInt(document.getElementById("base1").value);
-
+    //Aqui é feito um teste para verificar que o número é binário antes de inciar a conversão
+       if (!isBinary(number)) {
+    	alert("Número não binário!");
+    	return;
+    }    
     // converter para decimal:
     const result = parseInt(number, 2);
 
@@ -165,3 +169,20 @@ function convert() {
 function clearResult(){
     document.getElementById("base1").value = ''
   }
+
+function isBinary(number) {
+    // se o número de entrada for um número negativo, não é feita a interação e é retornado resultado "false"
+    if(number < 0)
+        return false;
+    // Converter o número "base1" em uma string 
+    numberString = number.toString();
+    // percorrer toda a string para confirmar que o número é binário
+    // the number input in the parameter of the function
+    for(let i=0; i<numberString.length; i++) {
+        // se qualquer elemento da string for maior que 1, não é um número binário. Logo, a função retornará "false"
+        if(numberString[i]>1)
+            return false;
+    }
+    //se todos os caracteres passarem no testes, ou seja, nenhum deles for maior que 1, trata-se de um número binário e a função retorna "true"
+    return true;
+}
