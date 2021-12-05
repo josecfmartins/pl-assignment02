@@ -97,8 +97,12 @@ function convert() {
         if (flexRadioDefaultbin.checked && flexRadioDefaulthex1.checked){
             //Aqui, é feita a conversão de binário para hexadecimal
             //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número binário.
-        
             const number = parseInt(document.getElementById("base1").value);
+            //Aqui é feito um teste para verificar que o número é binário antes de inciar a conversão
+             if (!isBinary(number)) {
+            alert("Número não binário!");
+    	    return;
+            }  
         
             // converter para hexadecimal:
             // result representa o valor em hexadecimal
@@ -127,7 +131,14 @@ function convert() {
         // Aqui, é feita a conversão de binário para octal. toString retorna a string de um número
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número binário.
         // O método toString [8] retorna a string na base 8; ou seja, retorna o número binário daquele octal.
+        
+        //Aqui é feito um teste para verificar que o número é binário antes de inciar a conversão
         const number = parseInt(document.getElementById("base1").value);
+
+        if (!isBinary(number)) {
+            alert("Número não binário!");
+    	    return;
+            }  
     
         // converter para octal:
         const result = parseInt(number, 2).toString(8);
