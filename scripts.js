@@ -100,3 +100,7 @@ function convert() {
 
 
 }
+
+function clearResult(){
+    document.getElementById("base1").value = ''
+  }
