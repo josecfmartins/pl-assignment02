@@ -31,6 +31,33 @@ function convert() {
 
     document.getElementById("Converter").innerHTML=("Decimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas asquantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes."  );
     }
+    
+    //Conversão Decimal para Octal:
+    if (flexRadioDefaultdec.checked && flexRadioDefaultoct1.checked){
+        // Aqui, é feita a conversão de decimal para octal. toString retorna a string de um número
+        //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número decimal.
+        // O método toString [8] retorna a string na base 8; ou seja, retorna o número binário daquele decimal.
+        const number = parseInt(document.getElementById("base1").value);
+    
+        // converter para octal:
+        const result = number.toString(8);
+    
+        document.getElementById("Converter").innerHTML=("Octagonal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes." + "<p></p>" + "<h5>Sistema Octagonal:</h5>" + "Sistema Octagonal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "<p></p>" + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação" );
+        
+        }
+    
+        //Conversão Octal para Decimal:
+        if (flexRadioDefaultoct.checked && flexRadioDefaultdec1.checked){
+        //Aqui, é feita a conversão de octal para decimal.
+        //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número binário.
+    
+        const number = parseInt(document.getElementById("base1").value);
+    
+        // converter para decimal:
+        const result = parseInt(number, 8);
+    
+        document.getElementById("Converter").innerHTML=("Decimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Octagonal:</h5>" + "Sistema Octagonal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "<p></p>" + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes."  );
+        }
 
 
 //Alerta para tentar converter um número para a mesma base em que o mesmo se encontra    
