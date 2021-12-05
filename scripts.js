@@ -160,10 +160,35 @@ function convert() {
     else {
         document.getElementById('Converter').style.visibility='visible' ;
   }
-
-
-
-
+    
+    //Conversão Hexadecimal para Octagonal:
+    if (flexRadioDefaulthex.checked && flexRadioDefaultoct1.checked){
+        // Aqui, é feita a conversão de decimal para octagonal. toString retorna a string de um número
+        //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número decimal.
+        // O método toString [8] retorna a string na base 8; ou seja, retorna o número octogonal daquele hexadecimal.
+        const number = parseInt(document.getElementById("base1").value);
+    
+        // converter para octagonal:
+        const result = number.toString(8);
+    
+        document.getElementById("Converter").innerHTML=("Octagonal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Hexadecimal:</h5>" + "<p></p>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos onjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" + "<p></p>"  + "<h5>Sistema Octagonal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "<p></p>" + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação");
+        
+        }
+    
+        //Conversão Octagonal para Hexadecimal:
+        if (flexRadioDefaultoct.checked && flexRadioDefaulthex1.checked){
+        //Aqui, é feita a conversão de octal para decimal.
+        //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número binário.
+    
+        const number = parseInt(document.getElementById("base1").value);
+    
+        // converter para hexadecimal:
+        const result = parseInt(number, 16);
+    
+        document.getElementById("Converter").innerHTML=("Hexadecimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Octagonal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "<p></p>" + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação"+ "<h5>Sistema Hexadecimal:</h5>" + "<p></p>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos onjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}");
+        }
+    
+    
 }
 
 function clearResult(){
