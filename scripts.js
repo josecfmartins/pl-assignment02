@@ -22,6 +22,9 @@ function convert() {
     // converter para binário:
     const result = number3.toString(2);
 
+    //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+    document.getElementById('Converter').scrollIntoView();
+
     document.getElementById("Converter").innerHTML=("Binário:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes." + "<p></p>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas asquantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." );
     
     }
@@ -40,7 +43,10 @@ function convert() {
     // converter para decimal:
     const result = parseInt(number, 2);
 
-    document.getElementById("Converter").innerHTML=("Decimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas asquantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes."  );
+    //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+    document.getElementById('Converter').scrollIntoView();
+
+    document.getElementById("Converter").innerHTML=("Decimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas as quantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes."  );
     }
     
     //Conversão Decimal para Octal:
@@ -57,6 +63,9 @@ function convert() {
         }
         // converter para octal:
         const result = number3.toString(8);
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
     
         document.getElementById("Converter").innerHTML=("Octal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes." + "<p></p>" + "<h5>Sistema Octal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação" );
         
@@ -78,6 +87,9 @@ function convert() {
     
         // converter para decimal:
         const result = parseInt(number2, 8);
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
     
         document.getElementById("Converter").innerHTML=("Decimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Octal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "<p></p>" + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes."  );
         }
@@ -100,6 +112,9 @@ function convert() {
         // Hexadecimal não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
         //A, B, C, D, E, F sejam apresentadas em maiúsculas (UpperCase).
         const result = number3.toString(16).toUpperCase();
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
     
         document.getElementById("Converter").innerHTML=("Hexadecimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes." + "<p></p>" + "<h5>Sistema Hexadecimal:</h5>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos" + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" );
         
@@ -120,6 +135,9 @@ function convert() {
     
         // converter para decimal:
         const result = parseInt(number1, 16);
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
     
         document.getElementById("Converter").innerHTML=("Decimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Hexadecimal:</h5>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos" + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes."  );
         }
@@ -140,8 +158,11 @@ function convert() {
             // Hexadecimal não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
             //A, B, C, D, E, F sejam apresentadas em maiúsculas (UpperCase).		
             const result = parseInt(number, 2).toString(16).toUpperCase();
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
         
-            document.getElementById("Converter").innerHTML=("Hexadecimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas asquantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." + "<p></p>" + "<h5>Sistema Hexadecimal:</h5>" + "<p></p>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos" + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" );
+        document.getElementById("Converter").innerHTML=("Hexadecimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas asquantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." + "<p></p>" + "<h5>Sistema Hexadecimal:</h5>" + "<p></p>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos" + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" );
             }
     
         //Conversão Hexadecimal para Binário:
@@ -158,6 +179,9 @@ function convert() {
     
         // converter para Binário:
         const result = parseInt(number1, 16).toString(2);
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
     
         document.getElementById("Converter").innerHTML=("Binário:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Hexadecimal:</h5>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos" + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" + "<p></p>" + "<h5>Sistema Binário:</h5>" + "<p></p>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas as quantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." );
         }
@@ -179,6 +203,9 @@ function convert() {
     
         // converter para octal:
         const result = parseInt(number, 2).toString(8);
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
     
         document.getElementById("Converter").innerHTML=("Octal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Binário:</h5>" + "<p></p>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas as quantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." + "<p></p>" + "<h5>Sistema Octal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação" );
         
@@ -201,6 +228,9 @@ function convert() {
     
         // converter para binário:
         const result = parseInt(number2, 8).toString(2);
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
     
         document.getElementById("Converter").innerHTML=("Binário:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Octal:</h5>" + "<p></p>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação" + "<p></p>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas asquantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." );
         
@@ -221,6 +251,9 @@ function convert() {
 
         //converter para octagonal:
         const result = parseInt(number1, 16).toString(8);
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
 
         document.getElementById("Converter").innerHTML=("Octal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Hexadecimal:</h5>" + "<p></p>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos onjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}" + "<p></p>"  + "<h5>Sistema Octal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação");
 
@@ -244,6 +277,9 @@ function convert() {
         // Hexadecimal não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
         //A, B, C, D, E, F sejam apresentadas em maiúsculas (UpperCase)
         const result = parseInt(number2, 8).toString(16).toUpperCase();
+
+        //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
+        document.getElementById('Converter').scrollIntoView();
 
         document.getElementById("Converter").innerHTML=("Hexadecimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Octal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "<p></p>" + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação"+ "<h5>Sistema Hexadecimal:</h5>" + "<p></p>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos onjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}");
         }
