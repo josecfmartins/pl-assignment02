@@ -248,20 +248,10 @@ function clearResult(){
   }
 
 function isBinary(number) {
-    // se o número de entrada for um número negativo, não é feita a interação e é retornado resultado "false"
-    if(number < 0)
-        return false;
-    // Converter o número "base1" em uma string 
-    numberString = number.toString();
-    // percorrer toda a string para confirmar que o número é binário
-    // the number input in the parameter of the function
-    for(let i=0; i<numberString.length; i++) {
-        // se qualquer elemento da string for maior que 1, não é um número binário. Logo, a função retornará "false"
-        if(numberString[i]>1)
-            return false;
-    }
-    //se todos os caracteres passarem no testes, ou seja, nenhum deles for maior que 1, trata-se de um número binário e a função retorna "true"
-    return true;
+    //O método "indexOf() retorna a posição da primeira ocorrência de uma condição em uma string"
+    //Caso a condição não seja encontrada, é retornado -1
+    //Como o "indexOf()" é case sentive, ou seja, faz a diferenciação entra maiúsculas e minúsculas, foram acrescentadas as condições Aa, Bb etc"
+    return ('01'.indexOf(number) > -1);
 }
 
 function isHexa(number) {
