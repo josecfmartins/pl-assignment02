@@ -85,7 +85,13 @@ function convert() {
         //Aqui, é feita a conversão de hexadecimal para decimal.
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número hexadecimal.
     
-        const number = parseInt(document.getElementById("base1").value);
+        //Aqui é feito um teste para verificar que o número é hexa antes de inciar a conversão
+        const number1 = parseInt(document.getElementById("base1").value);
+
+        if (!isHexa(number1)) {
+            alert("Número não está em base hexadecimal!");
+    	    return;
+            }  
     
         // converter para decimal:
         const result = parseInt(number, 16);
@@ -117,7 +123,13 @@ function convert() {
         if (flexRadioDefaulthex.checked && flexRadioDefaultbin1.checked){
         //Aqui, é feita a conversão de Hexadecimal para Binário.
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número hexadecimal.
-        const number = parseInt(document.getElementById("base1").value);
+        //Aqui é feito um teste para verificar que o número é hexa antes de inciar a conversão
+        const number1 = parseInt(document.getElementById("base1").value);
+
+        if (!isHexa(number1)) {
+            alert("Número não está em base hexadecimal!");
+    	    return;
+            }  
     
         // converter para Binário:
         const result = parseInt(number, 16).toString(2);
@@ -165,7 +177,14 @@ function convert() {
         // Aqui, é feita a conversão de decimal para octagonal. toString retorna a string de um número
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número hexadecimal.
         // O método toString [8] retorna a string na base 8; ou seja, retorna o número octogonal daquele hexadecimal.
-        const number = parseInt(document.getElementById("base1").value);
+        
+        //Aqui é feito um teste para verificar que o número é hexa antes de inciar a conversão
+        const number1 = parseInt(document.getElementById("base1").value);
+
+        if (!isHexa(number1)) {
+            alert("Número não está em base hexadecimal!");
+    	    return;
+            }  
 
         //converter para octagonal:
         const result = parseInt(number, 16).toString(8);
@@ -222,3 +241,10 @@ function isBinary(number) {
     //se todos os caracteres passarem no testes, ou seja, nenhum deles for maior que 1, trata-se de um número binário e a função retorna "true"
     return true;
 }
+
+function isHexa(number) {
+    //O método "indexOf() retorna a posição da primeira ocorrência de uma condição em uma string"
+    //Caso a condição não seja encontrada, é retornado -1
+    //Como o "indexOf()" é case sentive, ou seja, faz a diferenciação entra maiúsculas e minúsculas, foram acrescentadas as condições Aa, Bb etc"
+    return ('0123456789ABCDEFabcdef'.indexOf(number) > -1);
+    }
