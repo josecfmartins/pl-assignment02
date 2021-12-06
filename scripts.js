@@ -266,29 +266,57 @@ function clearResult(){
   }
 
 function isBinary(number) {
-    //O método "indexOf() retorna a posição da primeira ocorrência de uma condição em uma string"
-    //Caso a condição não seja encontrada, é retornado -1
-    //Como o "indexOf()" é case sentive, ou seja, faz a diferenciação entra maiúsculas e minúsculas, foram acrescentadas as condições Aa, Bb etc"
-    return ('01'.indexOf(number) > -1);
+    //O número entrado no HTML deve ser convertido em uma string para que possamo utilizar o indexOf
+    //É preciso fazer um cliclo que percorra toda a string e verifique se os elementos são encontrados na mesma. 
+    //Caso o ciclo não seja feito, o indexOf vai procurar apenas "01" e, se encontrar, dirá que o número
+    //é binário
+    numberString = number.toString();
+
+    for(let i=0; i<numberString.length; i++) {
+    	if ('01'.indexOf(numberString[i]) === -1)
+      	return false;
+    }
+    return true;
 }
 
 function isHexa(number) {
-    //O método "indexOf() retorna a posição da primeira ocorrência de uma condição em uma string"
-    //Caso a condição não seja encontrada, é retornado -1
-    //Como o "indexOf()" é case sentive, ou seja, faz a diferenciação entra maiúsculas e minúsculas, foram acrescentadas as condições Aa, Bb etc"
-    return ('0123456789ABCDEFabcdef'.indexOf(number) > -1);
+    //O número entrado no HTML deve ser convertido em uma string para que possamo utilizar o indexOf
+    //É preciso fazer um cliclo que percorra toda a string e verifique se os elementos são encontrados na mesma. 
+    //Caso o ciclo não seja feito, o indexOf vai procurar apenas "01" e, se encontrar, dirá que o número
+    //é hexadecimal
+    numberString = number.toString();
+
+    for(let i=0; i<numberString.length; i++) {
+    	if ('0123456789ABCDEFabcdef'.indexOf(numberString[i]) === -1)
+      	return false;
     }
+    return true;
+}
 
 function isOctal(number) {
-    //O método "indexOf() retorna a posição da primeira ocorrência de uma condição em uma string"
-    //Caso a condição não seja encontrada, é retornado -1
-     //Para o sistema decimal, as condições são os números 0,1,2,3,4,5,6,7
-    return ('01234567'.indexOf(number) > -1);
+    //O número entrado no HTML deve ser convertido em uma string para que possamo utilizar o indexOf
+    //É preciso fazer um cliclo que percorra toda a string e verifique se os elementos são encontrados na mesma. 
+    //Caso o ciclo não seja feito, o indexOf vai procurar apenas "01" e, se encontrar, dirá que o número
+    //é octal
+    numberString = number.toString();
+
+    for(let i=0; i<numberString.length; i++) {
+    	if ('01234567'.indexOf(numberString[i]) === -1)
+      	return false;
     }
+    return true;
+}
 
 function isDecimal(number) {
-    //O método "indexOf() retorna a posição da primeira ocorrência de uma condição em uma string"
-    //Caso a condição não seja encontrada, é retornado -1
-    //Para o sistema decimal, as condições são os números 0,1,2,3,4,5,6,7,8,9 e os símbolos: , ; -
-    return ('0123456789,;-'.indexOf(number) > -1);
+    //O número entrado no HTML deve ser convertido em uma string para que possamo utilizar o indexOf
+    //É preciso fazer um cliclo que percorra toda a string e verifique se os elementos são encontrados na mesma. 
+    //Caso o ciclo não seja feito, o indexOf vai procurar apenas "01" e, se encontrar, dirá que o número
+    //é decimal
+    numberString = number.toString();
+
+    for(let i=0; i<numberString.length; i++) {
+    	if ('0123456789,;-'.indexOf(numberString[i]) === -1)
+      	return false;
     }
+    return true;
+}
