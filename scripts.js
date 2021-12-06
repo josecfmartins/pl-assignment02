@@ -25,7 +25,7 @@ function convert() {
     //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
     document.getElementById('Converter').scrollIntoView();
 
-    document.getElementById("Converter").innerHTML=("Binário:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes." + "<p></p>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas asquantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." );
+    document.getElementById("Converter").innerHTML=("Binário:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes." + "<p></p>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas as quantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." );
     
     }
 
@@ -53,7 +53,7 @@ function convert() {
     if (flexRadioDefaultdec.checked && flexRadioDefaultoct1.checked){
         // Aqui, é feita a conversão de decimal para octal. toString retorna a string de um número
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número decimal.
-        // O método toString [8] retorna a string na base 8; ou seja, retorna o número binário daquele decimal.
+        // O método toString [8] retorna a string na base 8; ou seja, retorna o número octal daquele decimal.
         const number3 = parseInt(document.getElementById("base1").value);
         //Aqui é feito um teste para avaliar se o número está em base decimal
 
@@ -74,7 +74,7 @@ function convert() {
         //Conversão Octal para Decimal:
         if (flexRadioDefaultoct.checked && flexRadioDefaultdec1.checked){
         //Aqui, é feita a conversão de octal para decimal.
-        //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número binário.
+        //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número octal.
     
         const number2 = parseInt(document.getElementById("base1").value);
         //Aqui é feito um teste para verificar se o número entrado no HTML está em base octal
@@ -109,7 +109,7 @@ function convert() {
     
         // converter para hexadecimal:
         // result representa o valor em hexadecimal
-        // Hexadecimal não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
+        // Hexadecimal em JAVASCRIPT não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
         //A, B, C, D, E, F sejam apresentadas em maiúsculas (UpperCase).
         const result = number3.toString(16).toUpperCase();
 
@@ -155,8 +155,8 @@ function convert() {
         
             // converter para hexadecimal:
             // result representa o valor em hexadecimal
-            // Hexadecimal não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
-            //A, B, C, D, E, F sejam apresentadas em maiúsculas (UpperCase).		
+            // Hexadecimal em JAVASCRIPT não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
+            //A, B, C, D, E, F sejam apresentadas em maiúsculas (UpperCase).	
             const result = parseInt(number, 2).toString(16).toUpperCase();
 
         //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
@@ -237,9 +237,9 @@ function convert() {
         }
     //Conversão Hexadecimal para Octal:
     if (flexRadioDefaulthex.checked && flexRadioDefaultoct1.checked){
-        // Aqui, é feita a conversão de decimal para octagonal. toString retorna a string de um número
+        // Aqui, é feita a conversão de decimal para octal. toString retorna a string de um número
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número hexadecimal.
-        // O método toString [8] retorna a string na base 8; ou seja, retorna o número octogonal daquele hexadecimal.
+        // O método toString [8] retorna a string na base 8; ou seja, retorna o octal daquele hexadecimal.
         
         //Aqui é feito um teste para verificar que o número é hexa antes de inciar a conversão
         const number1 = parseInt(document.getElementById("base1").value);
@@ -249,7 +249,7 @@ function convert() {
     	    return;
             }  
 
-        //converter para octagonal:
+        //converter para octal:
         const result = parseInt(number1, 16).toString(8);
 
         //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
@@ -274,8 +274,8 @@ function convert() {
         }
 
         // converter para hexadecimal:
-        // Hexadecimal não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
-        //A, B, C, D, E, F sejam apresentadas em maiúsculas (UpperCase)
+        // Hexadecimal em JAVASCRIPT não faz diferenciação em maiúscula e minúscula, entretanto, para melhor compreensão, foi acrescentado o toUpperCase para que as letras 
+        //A, B, C, D, E, F sejam apresentadas em maiúsculas (UpperCase).
         const result = parseInt(number2, 8).toString(16).toUpperCase();
 
         //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
