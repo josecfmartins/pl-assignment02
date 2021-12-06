@@ -10,10 +10,17 @@ function convert() {
     // Aqui, é feita a conversão de decimal para binário. toString retorna a string de um número
     //Nesta caso, "base1", que é o valor entrada no HTML, corresponde ao número decimal.
     //Aqui, o método toString retorna a string na base 2; ou seja, retorna o número binário daquele decimal.
-    const number = parseInt(document.getElementById("base1").value);
+    
+    const number3 = parseInt(document.getElementById("base1").value);
+    //Aqui é feito um teste para avaliar se o número está em base decimal
+
+    if (!isDecimal(number3)){
+        alert("Número não está em base decimal!");
+    return;
+    }
 
     // converter para binário:
-    const result = number.toString(2);
+    const result = number3.toString(2);
 
     document.getElementById("Converter").innerHTML=("Binário:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<p></p>" + "<h5>Sistema Decimal:</h5>" + "<p></p>" + "O princípio fundamental do sistema decimal é que dez unidades de uma ordem qualquer formam uma de ordem imediatamente superior. Depois das ordens, as unidades constitutivas dos números são agrupadas em classes, em que cada classe tem três ordens, em que cada ordem tem uma denominação especial sendo idênticas às mesmas ordens de outras classes." + "<p></p>" + "<h5>Sistema Binário:</h5>" + "O sistema binário ou de base 2 é um sistema de numeração posicional em que todas asquantidades se representam com base em dois números, ou seja, zero e um (0 e 1)." );
     
@@ -41,8 +48,13 @@ function convert() {
         // Aqui, é feita a conversão de decimal para octal. toString retorna a string de um número
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número decimal.
         // O método toString [8] retorna a string na base 8; ou seja, retorna o número binário daquele decimal.
-        const number = parseInt(document.getElementById("base1").value);
-    
+        const number3 = parseInt(document.getElementById("base1").value);
+        //Aqui é feito um teste para avaliar se o número está em base decimal
+
+        if (!isDecimal(number3)){
+            alert("Número não está em base base decimal!");
+        return;
+        }
         // converter para octal:
         const result = number.toString(8);
     
@@ -75,7 +87,13 @@ function convert() {
         // Aqui, é feita a conversão de decimal para hexadecimal. toString retorna a string de um número
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número decimal.
         // O método toString [16] retorna a string na base 16; ou seja, retorna o número hexadecimal daquele decimal.
-        const number = parseInt(document.getElementById("base1").value);
+        const number3 = parseInt(document.getElementById("base1").value);
+        //Aqui é feito um teste para avaliar se o número está em base decimal
+
+            if (!isDecimal(number3)){
+                alert("Número não está em base decimal!");
+            return;
+            }
     
         // converter para hexadecimal:
         // result representa o valor em hexadecimal
@@ -264,5 +282,13 @@ function isHexa(number) {
 function isOctal(number) {
     //O método "indexOf() retorna a posição da primeira ocorrência de uma condição em uma string"
     //Caso a condição não seja encontrada, é retornado -1
+     //Para o sistema decimal, as condições são os números 0,1,2,3,4,5,6,7
     return ('01234567'.indexOf(number) > -1);
+    }
+
+function isDecimal(number) {
+    //O método "indexOf() retorna a posição da primeira ocorrência de uma condição em uma string"
+    //Caso a condição não seja encontrada, é retornado -1
+    //Para o sistema decimal, as condições são os números 0,1,2,3,4,5,6,7,8,9 e os símbolos: , ; -
+    return ('0123456789,;-'.indexOf(number) > -1);
     }
