@@ -312,53 +312,6 @@ function isBinary(number) {
     for(let i=0; i<numberString.length; i++) {
     	if ('01'.indexOf(numberString[i]) === -1)
       	return false;
-<<<<<<< HEAD
-=======
-    }
-    return true;
-}
-
-function isHexa(number) {
-    //O número entrado no HTML deve ser convertido em uma string para que possamo utilizar o indexOf
-    //É preciso fazer um cliclo que percorra toda a string e verifique se os elementos são encontrados na mesma. 
-    //Caso o ciclo não seja feito, o indexOf vai procurar apenas "01" e, se encontrar, dirá que o número
-    //é hexadecimal
-    numberString = number.toString();
-
-    for(let i=0; i<numberString.length; i++) {
-    	if ('0123456789ABCDEFabcdef'.indexOf(numberString[i]) === -1)
-      	return false;
-        }
-        return true;
-        
-
-}
-
-function isOctal(number) {
-    //O número entrado no HTML deve ser convertido em uma string para que possamo utilizar o indexOf
-    //É preciso fazer um cliclo que percorra toda a string e verifique se os elementos são encontrados na mesma. 
-    //Caso o ciclo não seja feito, o indexOf vai procurar apenas "01" e, se encontrar, dirá que o número
-    //é octal
-    numberString = number.toString();
-
-    for(let i=0; i<numberString.length; i++) {
-    	if ('01234567'.indexOf(numberString[i]) === -1)
-      	return false;
-    }
-    return true;
-}
-
-function isDecimal(number) {
-    //O número entrado no HTML deve ser convertido em uma string para que possamo utilizar o indexOf
-    //É preciso fazer um cliclo que percorra toda a string e verifique se os elementos são encontrados na mesma. 
-    //Caso o ciclo não seja feito, o indexOf vai procurar apenas "01" e, se encontrar, dirá que o número
-    //é decimal
-    numberString = number.toString();
-
-    for(let i=0; i<numberString.length; i++) {
-    	if ('0123456789,;-'.indexOf(numberString[i]) === -1)
-      	return false;
->>>>>>> 8c03d0d01f5483bcb615166917df0b5f79cf951a
     }
     return true;
 }
