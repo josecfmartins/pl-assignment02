@@ -126,7 +126,7 @@ function convert() {
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número hexadecimal.
     
         //Aqui é feito um teste para verificar que o número é hexa antes de inciar a conversão
-        const number1 = parseInt(document.getElementById("base1").value);
+        let number1 = (document.getElementById("base1").value);
 
         if (!isHexa(number1)) {
             alert("Número não está em base hexadecimal!");
@@ -134,7 +134,8 @@ function convert() {
             }  
     
         // converter para decimal:
-        const result = parseInt(number1, 16);
+        let result = parseInt(number1, 16);
+        
 
         //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
         document.getElementById('Converter').scrollIntoView();
@@ -170,7 +171,7 @@ function convert() {
         //Aqui, é feita a conversão de Hexadecimal para Binário.
         //Nesta caso, "base1", que é o valor entrada no HTML corresponde ao número hexadecimal.
         //Aqui é feito um teste para verificar que o número é hexa antes de inciar a conversão
-        const number1 = parseInt(document.getElementById("base1").value);
+        let number1 = (document.getElementById("base1").value);
 
         if (!isHexa(number1)) {
             alert("Número não está em base hexadecimal!");
@@ -178,7 +179,7 @@ function convert() {
             }  
     
         // converter para Binário:
-        const result = parseInt(number1, 16).toString(2);
+        let result = parseInt(number1, 16).toString(2);
 
         //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
         document.getElementById('Converter').scrollIntoView();
@@ -242,7 +243,7 @@ function convert() {
         // O método toString [8] retorna a string na base 8; ou seja, retorna o octal daquele hexadecimal.
         
         //Aqui é feito um teste para verificar que o número é hexa antes de inciar a conversão
-        const number1 = parseInt(document.getElementById("base1").value);
+        let number1 = (document.getElementById("base1").value);
 
         if (!isHexa(number1)) {
             alert("Número não está em base hexadecimal!");
@@ -250,7 +251,7 @@ function convert() {
             }  
 
         //converter para octal:
-        const result = parseInt(number1, 16).toString(8);
+        let result = parseInt(number1, 16).toString(8);
 
         //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
         document.getElementById('Converter').scrollIntoView();
@@ -281,7 +282,7 @@ function convert() {
         //Função para rodar a página até a caixa onde os resultados são printados após apertar o botão "Calcular"
         document.getElementById('Converter').scrollIntoView();
 
-        document.getElementById("Converter").innerHTML=("Hexadecimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Octal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "<p></p>" + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação"+ "<h5>Sistema Hexadecimal:</h5>" + "<p></p>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos." + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}");
+        document.getElementById("Converter").innerHTML=("Hexadecimal:" + ' ' + result + "<p></p>" + "<h4>Mais sobre as bases<h4>" + "<h5>Sistema Octal:</h5>" + "Sistema Octal é um sistema de numeração cuja base é 8, ou seja, utiliza 8 símbolos para a representação de quantidade." + "No ocidente, estes símbolos são os algarismos arábicos. O octal foi muito utilizado em informática como uma alternativa ais compacta ao sistema binário na programação" + "<p></p>" + "<h5>Sistema Hexadecimal:</h5>" + "<p></p>" + "O sistema hexadecimal é um sistema de numeração posicional que representa os números em base 16, empregando, portanto, 16 símbolos." + "<p></p>" + "Conjunto de simbolos: S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}");
         }
 
 
@@ -325,8 +326,10 @@ function isHexa(number) {
     for(let i=0; i<numberString.length; i++) {
     	if ('0123456789ABCDEFabcdef'.indexOf(numberString[i]) === -1)
       	return false;
-    }
-    return true;
+        }
+        return true;
+        
+
 }
 
 function isOctal(number) {
