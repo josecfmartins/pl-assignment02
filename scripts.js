@@ -289,7 +289,7 @@ function convert() {
     
     //Alerta para tentar converter um número para a mesma base em que o mesmo se encontra    
     if (flexRadioDefaultbin.checked && flexRadioDefaultbin1.checked || flexRadioDefaultdec.checked && flexRadioDefaultdec1.checked || flexRadioDefaultoct.checked && flexRadioDefaultoct1.checked || flexRadioDefaulthex.checked && flexRadioDefaulthex1.checked ){
-    alert("Os números devem estar em bases diferentes para realizar a conversão");
+    alert("As bases devem ser diferentes para realizar a conversão");
     }
 
     else {
